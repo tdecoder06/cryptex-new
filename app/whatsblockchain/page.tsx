@@ -19,10 +19,10 @@ export default function WhatsBlockchain() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none" />
         <FadeIn>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-blue-700 tracking-tighter">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-blue-700 tracking-tighter">
             What is <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
               Blockchain?
@@ -37,7 +37,7 @@ export default function WhatsBlockchain() {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <div className="max-w-7xl mx-auto px-6 space-y-32 mb-32">
+      <div className="max-w-7xl mx-auto px-6 space-y-16 md:space-y-32 mb-32">
 
         {/* SECTION 1: THE LEDGER */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
@@ -93,7 +93,7 @@ export default function WhatsBlockchain() {
         </section>
 
         {/* SECTION 3: USE CASES */}
-        <section className="bg-blue-500/5 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <section className="bg-blue-500/5 rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
           <FadeIn>
             <h2 className="text-4xl font-bold mb-8 text-blue-700">Beyond Money</h2>
             <p className="text-xl text-muted max-w-4xl mx-auto mb-12 leading-relaxed">

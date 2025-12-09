@@ -7,6 +7,13 @@ import Features from '../components/features';
 import Info from '../components/info';
 import Footer from '@/components/footer';
 import { FadeIn } from '@/components/FadeIn';
+import PluginComponent from '@/components/plugin';
+
+
+
+
+
+
 
 
 
@@ -23,6 +30,7 @@ export default function Home() {
       </FadeIn>
       <FadeIn delay={400}>
         <MarketTable />
+        <PluginComponent />
       </FadeIn>
       <FadeIn delay={600}>
         <Features />
@@ -30,7 +38,11 @@ export default function Home() {
       <FadeIn delay={800}>
         <Info />
       </FadeIn>
+      
+       
+
       <Footer />
+
 
     </div>
   );

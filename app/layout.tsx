@@ -4,8 +4,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Script from "next/script";
 
 import ClientWrappers from "@/providers/PrivyProviders";
+
+import SolanaProvider from "@/providers/SolanaProvider";
 
 const homeVideo = localFont({
   src: "../public/fonts/myfont/HomeVideo-BLG6G.ttf",
@@ -38,11 +41,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          id="init-wallets"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+               window.navigator.wallets = window.navigator.wallets || [];
+             `,
+          }}
+        />
+        <Script
+          src="https://plugin.jup.ag/plugin-v1.js"
+          strategy="beforeInteractive"
+          data-preload
+          defer
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${homeVideo.variable} antialiased`}
       >
         <ClientWrappers>
-          {children}
+          <SolanaProvider>
+            {children}
+          </SolanaProvider>
         </ClientWrappers>
       </body>
     </html>

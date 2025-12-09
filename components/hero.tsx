@@ -3,19 +3,19 @@ import React, { use } from "react";
 import { usePrivy } from '@privy-io/react-auth';
 
 const Hero = () => {
-  const {login ,user }= usePrivy();
+  const { login, user } = usePrivy();
   return (
     <section
       className="
-        py-32 flex flex-col justify-center items-center text-center px-6
+        py-20 md:py-32 flex flex-col justify-center items-center text-center px-4 md:px-6
         bg-linear-to-b from-[#FAF7F1] via-[#F3EFE6] to-[#EDE9DF]
         relative overflow-hidden
       "
     >
-     
+
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(196,174,116,0.18),transparent_70%)]"></div>
 
-      <h1 className="text-5xl font-bold text-[#978a48] mb-6 relative z-10">
+      <h1 className="text-4xl md:text-5xl font-bold text-[#978a48] mb-6 relative z-10">
         No Experience? No Worries.
       </h1>
 

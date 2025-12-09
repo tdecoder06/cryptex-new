@@ -20,10 +20,10 @@ export default function WhatsCrypto() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-32 pb-20 overflow-hidden">
+      <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
         <FadeIn>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-primary tracking-tighter">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-primary tracking-tighter">
             What is <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">
               Cryptocurrency?
@@ -38,7 +38,7 @@ export default function WhatsCrypto() {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <div className="max-w-7xl mx-auto px-6 space-y-32 mb-32">
+      <div className="max-w-7xl mx-auto px-6 space-y-16 md:space-y-32 mb-32">
 
         {/* SECTION 1: DEFINITION */}
         <section className="grid md:grid-cols-2 gap-12 items-center">
@@ -94,7 +94,7 @@ export default function WhatsCrypto() {
         </section>
 
         {/* SECTION 3: SMART CONTRACTS */}
-        <section className="bg-primary/5 rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+        <section className="bg-primary/5 rounded-[3rem] p-8 md:p-20 text-center relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             {/* Abstract BG pattern could go here */}
           </div>

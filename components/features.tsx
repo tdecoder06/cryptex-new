@@ -48,12 +48,12 @@ const Features = () => {
   ];
 
   return (
-    <div className="py-24 bg-[#d7e8ef] ">
+    <div className="py-16 md:py-24 bg-[#d7e8ef] ">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1b2c38]">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-[#1b2c38]">
             Why Choose <span className="text-[#2e5c74]">Cryptex</span>?
           </h2>
           <p className="text-[#4a5b63] text-lg mt-2 leading-relaxed">
