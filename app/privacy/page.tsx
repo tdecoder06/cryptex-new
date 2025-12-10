@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import Footer from "@/components/footer";
 
 import Navbar from "@/components/navbar";
@@ -18,7 +13,7 @@ export default function PrivacyPolicy() {
                 <h1 className="text-4xl md:text-5xl font-bold text-[#0A1238] mb-8 ">
 Privacy Policy for Cryptex                </h1>
                 <p className="text-gray-600 mt-2 leading-relaxed">
-This Privacy Policy explains how Cryptex ("we", "our", or "us") collects, uses, discloses, and protects your information when you use our website, tools, and services (collectively, the "Services").
+This Privacy Policy explains how Cryptex ({"we"}, {"our"}, or {"us"}) collects, uses, discloses, and protects your information when you use our website, tools, and services (collectively, the {"Services"}).
 
 By accessing or using Cryptex, you agree to the collection and use of information in accordance with this Privacy Policy.
 
@@ -236,7 +231,7 @@ Cryptex may include links to third-party sites. We are not responsible for:
 </p>
 
                         <h2 className="mt-4">
-                        9. Children's Privacy</h2>
+                        9. Children&apos;s Privacy</h2>
 <p className="text-gray-600 mt-2 leading-relaxed">
 Cryptex does not knowingly collect data from individuals under 18. If we become aware of such data, we will delete it immediately.
 
@@ -246,7 +241,7 @@ Cryptex does not knowingly collect data from individuals under 18. If we become 
                         <h2 className="mt-4">
                         10. Changes to This Privacy Policy</h2>
                         <p className="text-gray-600 mt-2 leading-relaxed">
-We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised "Last Updated" date.
+We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised {"Last Updated"} date.
 </p>
 
 <p className="text-gray-600 mt-2 leading-relaxed">

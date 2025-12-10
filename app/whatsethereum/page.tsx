@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { FadeIn } from "@/components/FadeIn";
 import { ScrollIcon, FuelIcon, LeafIcon } from "@/components/Icons";
-
+import Image from "next/image";
 const CryptoCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <div className="glass-card p-8 rounded-3xl hover:scale-105 transition-transform duration-300 border border-purple-500/10">
     <div className="text-purple-600 mb-4">{icon}</div>
@@ -44,7 +44,7 @@ export default function WhatsEthereum() {
           <FadeIn>
             <div className="relative">
               <div className="absolute -inset-4 bg-purple-500/10 rounded-full blur-3xl" />
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png"
                 alt="Ethereum"
                 className="relative rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 bg-white p-8 w-64 h-64 object-contain mx-auto"
@@ -57,7 +57,7 @@ export default function WhatsEthereum() {
               Proposed in 2013 by programmer Vitalik Buterin, Ethereum launched in 2015. While Bitcoin was designed as money, Ethereum was designed as a platform.
             </p>
             <p className="text-lg text-muted leading-relaxed">
-              It introduced the concept of "Smart Contracts"—programmable code that runs on the blockchain, enabling developers to build decentralized applications (DApps).
+              It introduced the concept of {"Smart Contracts"}—programmable code that runs on the blockchain, enabling developers to build decentralized applications (DApps).
             </p>
           </FadeIn>
         </section>
@@ -81,7 +81,7 @@ export default function WhatsEthereum() {
             </FadeIn>
             <FadeIn delay={300}>
               <CryptoCard title="Gas Fees" icon={<FuelIcon className="w-12 h-12" />}>
-                To run code on the "World Computer", you pay a fee in ETH called "Gas". This compensates the network for computing power.
+                To run code on the {"World Computer"}, you pay a fee in ETH called {"Gas"}. This compensates the network for computing power.
               </CryptoCard>
             </FadeIn>
             <FadeIn delay={500}>

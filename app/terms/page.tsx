@@ -1,13 +1,5 @@
-
-
-
-
-
-
 import Footer from "@/components/footer";
-
 import Navbar from "@/components/navbar";
-import React from "react";
 
 export default function TermsPage() {
     return (
@@ -16,10 +8,10 @@ export default function TermsPage() {
             {/* Section 1 */}
             <div className="max-w-4xl mx-auto mb-20 ">
                 <h1 className="text-4xl md:text-5xl font-bold text-[#0A1238] mb-8 ">
-                    Cryptex's Terms of Service
+                    Cryptex&apos;s Terms of Service
                 </h1>
                 <p className="text-gray-600 mt-2 leading-relaxed">
-                    Welcome to Cryptex. By accessing or using our website, platform, or any services we provide (collectively, the "Services"), you agree to comply with and be bound by these Terms and Conditions ("Terms"). Please read them carefully.
+                    Welcome to Cryptex. By accessing or using our website, platform, or any services we provide (collectively, the {"Services"}), you agree to comply with and be bound by these Terms and Conditions ({"Terms"}). Please read them carefully.
                 </p>
 
                 <div className="max-w-4xl mx-auto mb-20 mt-4 ">
@@ -45,62 +37,34 @@ export default function TermsPage() {
                     </h2>
                     <p className="text-gray-600 mt-2 leading-relaxed">
                         Cryptex provides tools, information, and features related to cryptocurrency trading, analysis, or portfolio management. We do not provide financial, investment, or legal advice.
-
                         Cryptocurrencies are highly volatile, and you acknowledge that:
-
                         You use Cryptex at your own risk.
-
                         You are solely responsible for your investment decisions.
-
                         Cryptex is not responsible for profits, losses, or damages arising from your use of cryptocurrency markets.
-
-
-
-
                     </p>
-                    <h2 className="mt-4">
-                        4. User Accounts</h2>
-                        <p className="text-gray-600 mt-2 leading-relaxed">
+                    <h2 className="mt-4">4. User Accounts</h2>
+                    <p className="text-gray-600 mt-2 leading-relaxed">
 To access certain features, you may be required to create an account. You agree to:
-
 Provide accurate and complete information.
-
 Maintain confidentiality of your login credentials.
-
 Take responsibility for all activities under your account.
-
-Cryptex reserves the right to suspend or terminate accounts that violate these Terms.
-                        </p>
-                        
-                    <h2 className="mt-4"></h2>
-                        <p className="text-gray-600 mt-2 leading-relaxed">
-
-                        </p>
-                       
-                    <h2 className="mt-4"> 5. Prohibited Activities</h2>
-                        <p className="text-gray-600 mt-2 leading-relaxed">
-You agree NOT to:
-
+Cryptex reserves the right to suspend or terminate accounts that violate these Terms.</p>
+                        <h2 className="mt-4"></h2>
+                        <p className="text-gray-600 mt-2 leading-relaxed"></p>
+                        <h2 className="mt-4"> 5. Prohibited Activities</h2>
+                        <p className="text-gray-600 mt-2 leading-relaxed">You agree NOT to:
 Use Cryptex for illegal or fraudulent purposes.
-
 Interfere with platform security or functionality.
-
 Upload malicious code, bots, or attempt unauthorized access.
-
 Use the platform to launder money or fund illegal activities.
-
 Any violation may result in account termination and legal action.
                         </p>
                         <h2 className="mt-4">6. Platform Availability</h2>
                         <p className="text-gray-600 mt-2 leading-relaxed">
 Cryptex strives to maintain continuous platform availability, but we do not guarantee:
-
 Uninterrupted access
-
 Error-free performance
-
 Protection from system failures or cyber-attacks
-
 We are not liable for losses caused by downtime, maintenance, or technical issues.
                         </p>
                     <h2 className="mt-4">   7. Third-Party Services </h2>

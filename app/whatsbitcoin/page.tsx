@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { FadeIn } from "@/components/FadeIn";
 import { PickaxeIcon, TrendingDownIcon, ShieldIcon } from "@/components/Icons";
+import Image from "next/image";
 
 const CryptoCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <div className="glass-card p-8 rounded-3xl hover:scale-105 transition-transform duration-300 border border-orange-500/10">
@@ -44,7 +45,7 @@ export default function WhatsBitcoin() {
           <FadeIn>
             <div className="relative">
               <div className="absolute -inset-4 bg-orange-500/10 rounded-full blur-3xl" />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?q=80&w=2069&auto=format&fit=crop"
                 alt="Bitcoin"
                 className="relative rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
@@ -54,10 +55,10 @@ export default function WhatsBitcoin() {
           <FadeIn delay={200}>
             <h2 className="text-4xl font-bold mb-6 text-orange-700">Satoshi Nakamoto</h2>
             <p className="text-lg text-muted mb-6 leading-relaxed">
-              In 2008, an unknown person or group named Satoshi Nakamoto published the Bitcoin whitepaper. It proposed a "Peer-to-Peer Electronic Cash System" that didn't rely on banks.
+              In 2008, an unknown person or group named Satoshi Nakamoto published the Bitcoin whitepaper. It proposed a {"Peer-to-Peer Electronic Cash System"} that didn&apos;t rely on banks.
             </p>
             <p className="text-lg text-muted leading-relaxed">
-              On January 3, 2009, the Genesis Block was mined, launching the network. To this day, Satoshi's identity remains a mystery.
+              On January 3, 2009, the Genesis Block was mined, launching the network. To this day, Satoshi&apos;s identity remains a mystery.
             </p>
           </FadeIn>
         </section>

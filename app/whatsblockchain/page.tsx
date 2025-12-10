@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { FadeIn } from "@/components/FadeIn";
 import { GlobeIcon, EyeIcon, LockIcon } from "@/components/Icons";
-
+import Image from "next/image"
 const CryptoCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <div className="glass-card p-8 rounded-3xl hover:scale-105 transition-transform duration-300 border border-blue-500/10">
     <div className="text-blue-600 mb-4">{icon}</div>
@@ -20,11 +20,11 @@ export default function WhatsBlockchain() {
 
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-blue-500/5 to-transparent pointer-events-none" />
         <FadeIn>
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-blue-700 tracking-tighter">
             What is <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
               Blockchain?
             </span>
           </h1>
@@ -44,8 +44,10 @@ export default function WhatsBlockchain() {
           <FadeIn>
             <div className="relative">
               <div className="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl" />
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2032&auto=format&fit=crop"
+                width={800}
+                 height={600}
                 alt="Blockchain"
                 className="relative rounded-3xl shadow-2xl -rotate-3 hover:rotate-0 transition-transform duration-500"
               />
@@ -97,7 +99,7 @@ export default function WhatsBlockchain() {
           <FadeIn>
             <h2 className="text-4xl font-bold mb-8 text-blue-700">Beyond Money</h2>
             <p className="text-xl text-muted max-w-4xl mx-auto mb-12 leading-relaxed">
-              Blockchain isn't just for Bitcoin. It's being used to revolutionize supply chains, healthcare records, voting systems, and digital identity.
+              Blockchain isn&apos;t just for Bitcoin. It&apos;s being used to revolutionize supply chains, healthcare records, voting systems, and digital identity.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {["Supply Chain", "Healthcare", "Voting", "Identity", "Real Estate", "Gaming"].map((tag) => (
@@ -108,9 +110,7 @@ export default function WhatsBlockchain() {
             </div>
           </FadeIn>
         </section>
-
       </div>
-
       <Footer />
     </div>
   );

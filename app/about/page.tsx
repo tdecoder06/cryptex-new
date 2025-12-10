@@ -15,7 +15,7 @@ export default function HomePage() {
             About Us
           </h1>
           <p className="text-gray-600 mt-2 leading-relaxed">
-            Cryptocurrency is about the art of the possible. We're here to open the door to the world of online purchases, from luxury watches to new real estate.
+            Cryptocurrency is about the art of the possible. We&apos;re here to open the door to the world of online purchases, from luxury watches to new real estate.
             <br /><br />
             Our mission is to accelerate the everyday use of cryptocurrencies by providing the go-to Defi Crypto Exchange for all transactions.
             <br /><br />
