@@ -20,11 +20,11 @@ export default function WhatsBitcoin() {
 
       {/* HERO SECTION */}
       <section className="relative min-h-[60vh] flex flex-col items-center justify-center text-center px-6 pt-24 md:pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-linear-to-b from-orange-500/5 to-transparent pointer-events-none" />
         <FadeIn>
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-orange-600 tracking-tighter">
             What is <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-500 to-yellow-500">
               Bitcoin?
             </span>
           </h1>

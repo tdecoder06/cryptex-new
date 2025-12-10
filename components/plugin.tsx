@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 export default function PluginComponent() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      window.Jupiter.init({
+      (window as any).Jupiter.init({
         displayMode: "widget",
         integratedTargetId: "jupiter-plugin",
       });
@@ -14,7 +14,7 @@ export default function PluginComponent() {
 
   return (
     <div>
-      
+
       <div
         id="jupiter-plugin"
       />
