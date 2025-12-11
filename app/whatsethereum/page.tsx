@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { FadeIn } from "@/components/FadeIn";
 import { ScrollIcon, FuelIcon, LeafIcon } from "@/components/Icons";
-import Image from "next/image";
+
 const CryptoCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <div className="glass-card p-8 rounded-3xl hover:scale-105 transition-transform duration-300 border border-purple-500/10">
     <div className="text-purple-600 mb-4">{icon}</div>
@@ -44,7 +44,7 @@ export default function WhatsEthereum() {
           <FadeIn>
             <div className="relative">
               <div className="absolute -inset-4 bg-purple-500/10 rounded-full blur-3xl" />
-              <Image
+              <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png"
                 alt="Ethereum"
                 className="relative rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 bg-white p-8 w-64 h-64 object-contain mx-auto"

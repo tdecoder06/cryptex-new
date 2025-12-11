@@ -4,7 +4,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { FadeIn } from "@/components/FadeIn";
 import { GlobeIcon, EyeIcon, LockIcon } from "@/components/Icons";
-import Image from "next/image"
+// import Image from "next/image"
 const CryptoCard = ({ title, icon, children }: { title: string; icon: React.ReactNode; children: React.ReactNode }) => (
   <div className="glass-card p-8 rounded-3xl hover:scale-105 transition-transform duration-300 border border-blue-500/10">
     <div className="text-blue-600 mb-4">{icon}</div>
@@ -44,10 +44,8 @@ export default function WhatsBlockchain() {
           <FadeIn>
             <div className="relative">
               <div className="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl" />
-              <Image
+              <img
                 src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2032&auto=format&fit=crop"
-                width={800}
-                 height={600}
                 alt="Blockchain"
                 className="relative rounded-3xl shadow-2xl -rotate-3 hover:rotate-0 transition-transform duration-500"
               />
