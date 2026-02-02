@@ -51,11 +51,11 @@ export default function MarketTable() {
   // Create TradingView chart when selectedCoin changes
   useEffect(() => {
     if (!selectedCoin) return;
-    if (!(window as any).TradingView) return;
+    if (!window.TradingView) return;
 
     chartRef.current!.innerHTML = "";
 
-    new (window as any).TradingView.widget({
+    new window.TradingView.widget({
       symbol: selectedCoin.toUpperCase() + "USD",
       interval: "30", // 30-minute candles → 24h view
       container_id: "tv_chart_modal",
@@ -192,4 +192,6 @@ export default function MarketTable() {
     </>
   );
 }
+
+
 

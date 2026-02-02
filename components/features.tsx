@@ -1,12 +1,37 @@
+
 "use client";
 
-import React from "react";
-import { usePrivy } from "@privy-io/react-auth";
+import React, { useEffect, useState } from "react";
 import { FadeIn } from "./FadeIn";
-import { ShieldIcon, CreditCardIcon, ZapIcon, HeadphonesIcon, CoinsIcon, SettingsIcon } from "./Icons";
+import {
+  ShieldIcon,
+  CreditCardIcon,
+  ZapIcon,
+  HeadphonesIcon,
+  CoinsIcon,
+  SettingsIcon,
+} from "./Icons";
+
+import { account } from "@/components/appwrite";
+import type { Models } from "appwrite";
 
 const Features = () => {
-  const { login, user } = usePrivy();
+  const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null);
+
+  useEffect(() => {
+    account
+      .get()
+      .then((res) => setUser(res))
+      .catch(() => setUser(null));
+  }, []);
+
+  const handleLogin = () => {
+    account.createOAuth2Session(
+      "google",
+      "http://localhost:3000",
+      "http://localhost:3000"
+    );
+  };
 
   const features = [
     {
@@ -48,8 +73,7 @@ const Features = () => {
   ];
 
   return (
-    <div className="py-16 md:py-24 bg-[#d7e8ef] ">
-
+    <div className="py-16 md:py-24 bg-[#d7e8ef]">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
@@ -65,9 +89,7 @@ const Features = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {features.map((feature, index) => (
             <FadeIn key={index} delay={index * 100}>
-              <div
-                className="p-10 rounded-3xl bg-white shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_26px_rgba(0,0,0,0.12)] transition-all duration-300 h-full"
-              >
+              <div className="p-10 rounded-3xl bg-white shadow-[0_8px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_26px_rgba(0,0,0,0.12)] transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-[#c8dce5] text-[#2e5c74] rounded-2xl flex items-center justify-center mb-6">
                   {feature.icon}
                 </div>
@@ -82,22 +104,24 @@ const Features = () => {
           ))}
         </div>
 
-        {/* CTA SECTION */}
-        <div className="mt-24 rounded-3xl p-16 text-center bg-[#c9dce5] shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
-          <h2 className="text-4xl font-bold mb-6 text-[#1b2c38]">
-            Start Trading Today
-          </h2>
-          <p className="text-[#4a5b63] mb-8 max-w-2xl mx-auto">
-            Join the world's most comprehensive crypto ecosystem.
-          </p>
+        {/* CTA SECTION (Hidden if logged in) */}
+        {!user && (
+          <div className="mt-24 rounded-3xl p-16 text-center bg-[#c9dce5] shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+            <h2 className="text-4xl font-bold mb-6 text-[#1b2c38]">
+              Start Trading Today
+            </h2>
+            <p className="text-[#4a5b63] mb-8 max-w-2xl mx-auto">
+              Join the world's most comprehensive crypto ecosystem.
+            </p>
 
-          <button
-            onClick={login}
-            className="bg-[#2e5c74] text-white px-10 py-4 rounded-2xl text-lg shadow-md hover:bg-[#244b5f] hover:shadow-lg transition-all cursor-pointer"
-          >
-            Create Free Account
-          </button>
-        </div>
+            <button
+              onClick={handleLogin}
+              className="bg-[#2e5c74] text-white px-10 py-4 rounded-2xl text-lg shadow-md hover:bg-[#244b5f] hover:shadow-lg transition-all cursor-pointer"
+            >
+              Create Free Account
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
