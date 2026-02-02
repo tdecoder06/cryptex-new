@@ -14,11 +14,8 @@ interface Coin {
   image: string;
 }
 
-declare global {
-  interface Window {
-    TradingView: any;
-  }
-}
+
+
 
 export default function AllMarketsPage() {
   const [coins, setCoins] = useState<Coin[]>([]);
