@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 import { account } from "@/components/appwrite";
 import type { Models } from "appwrite";
+import { OAuthProvider } from "appwrite";
+
 
 const Hero = () => {
   const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null);
@@ -16,7 +18,8 @@ const Hero = () => {
 
   const handleSignUp = () => {
     account.createOAuth2Session(
-      "google",
+ OAuthProvider.Google,
+
       "http://localhost:3000",
       "http://localhost:3000"
     );

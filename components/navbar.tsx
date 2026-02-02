@@ -6,6 +6,8 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { account } from "@/components/appwrite";
 import type { Models } from "appwrite";
+import { OAuthProvider } from "appwrite";
+
 
 const Navbar: React.FC = () => {
   const [user, setUser] =
@@ -21,7 +23,7 @@ const Navbar: React.FC = () => {
 
   const handleLogin = () => {
     account.createOAuth2Session(
-      "google",
+      OAuthProvider.Google,
       "http://localhost:3000",
       "http://localhost:3000"
     );

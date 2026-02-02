@@ -3,6 +3,8 @@
 
 import React, { useEffect, useState } from "react";
 import { FadeIn } from "./FadeIn";
+import { OAuthProvider } from "appwrite";
+
 import {
   ShieldIcon,
   CreditCardIcon,
@@ -27,7 +29,7 @@ const Features = () => {
 
   const handleLogin = () => {
     account.createOAuth2Session(
-      "google",
+       OAuthProvider.Google,
       "http://localhost:3000",
       "http://localhost:3000"
     );
