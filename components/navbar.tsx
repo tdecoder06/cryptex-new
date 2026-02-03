@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   const handleLogin = () => {
     account.createOAuth2Session(
-      OAuthProvider.Google,
+        OAuthProvider.Google,
       "http://localhost:3000",
       "http://localhost:3000"
     );
